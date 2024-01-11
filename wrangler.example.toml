@@ -1,0 +1,7 @@
+compatibility_date = "2023-06-21"
+name = "<your name>"
+
+[[d1_databases]]
+binding = "DB"
+database_id = "<your database id>"
+database_name = "<your database name>"

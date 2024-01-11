@@ -40,6 +40,13 @@ export default function App() {
             }}
           >
             <h1>Movies!</h1>
+            <div>
+              <a href="https://github.com/remix-run/example-movies">Code</a> •{' '}
+              <a href="https://www.youtube.com/playlist?list=PLXoynULbYuEApkwAGZ7U7LmL-BDHloB0l">
+                YouTube Videos
+              </a>{' '}
+              • <a href="https://remix.run/docs/en/main">Remix Docs</a>
+            </div>
             <Search />
           </div>
           <Outlet />

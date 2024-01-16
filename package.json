@@ -1,5 +1,5 @@
 {
-  "name": "blog-test",
+  "name": "remix-movies",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -9,7 +9,7 @@
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "typecheck": "tsc",
     "pages:deploy": "npm run build && npm run db:migrate && wrangler pages deploy ./public",
-    "db:migrate": "wrangler d1 migrations apply pokemon"
+    "db:migrate": "wrangler d1 migrations apply remix-movies-db"
   },
   "dependencies": {
     "@remix-run/cloudflare": "2.4.1",

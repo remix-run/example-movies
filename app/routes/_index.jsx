@@ -2,7 +2,7 @@ import { defer, Await, useLoaderData } from '@remix-run/react'
 import { Suspense } from 'react'
 import { MovieLink } from '../movie-link'
 
-export async function loader({ context: { env } }) {
+export async function loader({ context: { cloudflare: { env } } }) {
   // use defer to unblock this DB query from the first byte
   // - speeds up TTFB
   // - speeds up FCP, LCP too because the browser can start downloading the

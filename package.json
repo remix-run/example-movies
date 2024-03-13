@@ -4,18 +4,17 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev --manual -c \"npm run start\"",
-    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
     "typecheck": "tsc",
-    "pages:deploy": "npm run build && npm run db:migrate && wrangler pages deploy ./public",
+    "pages:deploy": "npm run build && npm run db:migrate && wrangler pages deploy ./build/client",
     "db:migrate": "wrangler d1 migrations apply remix-movies-db"
   },
   "dependencies": {
-    "@remix-run/cloudflare": "2.4.1",
-    "@remix-run/cloudflare-pages": "2.4.1",
-    "@remix-run/css-bundle": "2.4.1",
-    "@remix-run/react": "2.4.1",
+    "@remix-run/cloudflare": "^2.8.1",
+    "@remix-run/cloudflare-pages": "^2.8.1",
+    "@remix-run/css-bundle": "^2.8.1",
+    "@remix-run/react": "^2.8.1",
     "isbot": "^3.6.8",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
@@ -23,14 +22,15 @@
     "react-dom": "^18.3.0-canary-c5b937576-20231219"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230518.0",
-    "@remix-run/dev": "2.4.1",
-    "@remix-run/eslint-config": "2.4.1",
+    "@cloudflare/workers-types": "^4.20240312.0",
+    "@remix-run/dev": "^2.8.1",
+    "@remix-run/eslint-config": "^2.8.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.38.0",
     "typescript": "^5.1.0",
-    "wrangler": "^3.1.1"
+    "vite": "^5.1.6",
+    "wrangler": "^3.33.0"
   },
   "engines": {
     "node": ">=18.0.0"

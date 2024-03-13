@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { MovieLink } from '../movie-link'
 
 // Query the database on the server before the data is replicated to indexeddb
-export async function loader({ request, context: { env } }) {
+export async function loader({ request, context: { cloudflare: { env } } }) {
   let q = new URL(request.url).searchParams.get('q')
   if (!q) return []
 
